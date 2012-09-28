@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="net.tiaozhanbei.model">
+  <class catalog="TZCup" name="net.tiaozhanbei.model.Vote" schema="dbo" table="vote">
+    <id name="id" type="integer">
+      <column name="vote_id"/>
+      <generator class="identity"/>
+    </id>
+    <property generated="never" lazy="false" name="title" type="string"/>
+    <property generated="never" lazy="false" name="description" type="string"/>
+    <set cascade="all" name="voteItems" sort="unsorted" table="voteitem">
+      <key column="voteid"/>
+      <one-to-many class="net.tiaozhanbei.model.VoteItem"/>
+    </set>
+    <property generated="never" lazy="false" name="enable" type="boolean"/>
+    <property name="type" type="integer"/>
+  </class>
+</hibernate-mapping>

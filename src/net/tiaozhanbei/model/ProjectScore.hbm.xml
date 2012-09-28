@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="net.tiaozhanbei.model">
+  <class catalog="TZCup" name="ProjectScore" schema="dbo" table="project_score">
+    <id name="Id" type="integer">
+      <column name="score_id"/>
+      <generator class="identity"/>
+    </id>
+    <property generated="never" lazy="false" name="score" type="integer"/>
+    <property generated="never" lazy="false" name="weight" type="integer"/>
+    <many-to-one class="net.tiaozhanbei.model.User" lazy="false" name="judger"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean name="projectCatagoryData" class="net.tiaozhanbei.util.datastruct.Catagory">
+<property name="name">
+	<value>projectCatagory</value>
+</property>
+<property name="children">
+	<list>
+		<ref bean="science"/>
+		<ref bean="natural"/>
+		<ref bean="society"/>
+	</list>
+</property>
+</bean>
+
+
+	
+	
+	<bean name="science" class="net.tiaozhanbei.util.datastruct.Catagory">
+	<property name="name">
+		<value>science</value>
+	</property>
+	<property name="children">
+		<list>
+			<ref bean="machineryControl"/>
+			<ref bean="communationScience"/>
+			<ref bean="mathmaticScience"/>
+			<ref bean="biologyScience"/>
+			<ref bean="chemicalScience"/>
+		</list>
+	</property>
+	</bean>
+	
+
+		<bean name="machineryControl" class="net.tiaozhanbei.util.datastruct.Catagory">
+		<property name="name">
+			<value>machineryControl</value>
+		</property>
+		</bean>
+
+		
+
+		<bean name="communationScience" class="net.tiaozhanbei.util.datastruct.Catagory">
+		<property name="name">
+			<value>communationScience</value>
+		</property>
+		</bean>
+
+		
+		
+		<bean name="mathmaticScience" class="net.tiaozhanbei.util.datastruct.Catagory">
+		<property name="name">
+			<value>mathmaticScience</value>
+		</property>
+		</bean>
+ 
+		
+		
+		<bean name="biologyScience" class="net.tiaozhanbei.util.datastruct.Catagory">
+		<property name="name">
+			<value>biologyScience</value>
+		</property>
+		</bean>
+ 	
+	
+	
+		<bean name="chemicalScience" class="net.tiaozhanbei.util.datastruct.Catagory">
+		<property name="name">
+			<value>chemicalScience</value>
+		</property>
+		</bean>
+ 	
+		
+
+	<bean name="natural" class="net.tiaozhanbei.util.datastruct.Catagory">
+	<property name="name">
+		<value>natural</value>
+	</property>
+	</bean>
+
+	
+	
+	<bean name="society" class="net.tiaozhanbei.util.datastruct.Catagory">
+	<property name="name">
+		<value>projectCatagory</value>
+	</property>
+	<property name="children">
+		<list>
+			<ref bean="philosophy"/>
+			<ref bean="economics"/>
+			<ref bean="societyScience"/>
+			<ref bean="law"/>
+			<ref bean="education"/>
+			<ref bean="management"/>
+		</list>
+	</property>
+	</bean>	
+	
+		<bean name="philosophy" class="net.tiaozhanbei.util.datastruct.Catagory">
+		<property name="name">
+			<value>philosophy</value>
+		</property>
+		</bean>
+ 
+		
+
+		<bean name="economics" class="net.tiaozhanbei.util.datastruct.Catagory">
+		<property name="name">
+			<value>economics</value>
+		</property>
+		</bean>
+ 
+		
+		
+		<bean name="education" class="net.tiaozhanbei.util.datastruct.Catagory">
+		<property name="name">
+			<value>education</value>
+		</property>
+		</bean>
+ 
+		
+		
+		<bean name="law" class="net.tiaozhanbei.util.datastruct.Catagory">
+		<property name="name">
+			<value>law</value>
+		</property>
+		</bean>
+ 
+		
+
+		<bean name="societyScience" class="net.tiaozhanbei.util.datastruct.Catagory">
+		<property name="name">
+			<value>societyScience</value>
+		</property>
+		</bean>
+ 
+		
+		
+		<bean name="management" class="net.tiaozhanbei.util.datastruct.Catagory">
+		<property name="name">
+			<value>management</value>
+		</property>
+		</bean>
+</beans> 

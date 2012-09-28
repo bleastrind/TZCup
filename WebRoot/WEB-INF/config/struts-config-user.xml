@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+<form-beans>
+    <form-bean name="regForm" type="net.tiaozhanbei.form.RegisterForm" />
+    <form-bean name="projectRegForm" type="net.tiaozhanbei.form.ProjectForm" />
+    <form-bean name="loginForm" type="net.tiaozhanbei.form.LoginForm" />
+    <form-bean name="editForm" type="net.tiaozhanbei.form.RegisterForm" />
+    <form-bean name="regAuthorAndProjectForm" type="net.tiaozhanbei.form.regAuthorAndProjectForm" />
+    <form-bean name="juderRegForm" type="net.tiaozhanbei.form.MoreUserInfoForm" />
+    <form-bean name="companyForm" type="net.tiaozhanbei.form.MoreUserInfoForm" />
+    <form-bean name="passWordForm" type="net.tiaozhanbei.form.passWordForm" />
+    <form-bean name="projectRegisterForm" type="net.tiaozhanbei.form.ProjectRegisterForm" />
+    
+   
+ </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="regForm"
+      input="/Web/Register/RegisterUser.jsp"
+      name="regForm"
+      path="/userRegister"
+      scope="request"
+      type="net.tiaozhanbei.action.user.RegisterAction">
+      <forward name="index" path="/Web/Index/index.jsp" />
+      <forward name="judgerReg" path="/Web/Register/JudgerReg.jsp" />
+      <forward name="authorReg" path="/Web/Register/AuthorRegister.jsp" />
+      <forward name="companyReg" path="/Web/Register/CompanyReg.jsp" />
+      <forward name="error" path="/Web/errorPage.jsp" />
+    </action>
+    <action
+      attribute="loginForm"
+      input="/Web/Login.jsp"
+      name="loginForm"
+      path="/loginoprate"
+      scope="request"
+      type="net.tiaozhanbei.action.user.LoginAction">
+      <forward name="loginpage" path="/Web/Login.jsp" />
+      <forward name="redirect" path="/Web/common/redirect.jsp" />
+      <forward
+        name="manage"
+        path="/manage.do"
+        redirect="true" />
+    </action>
+    
+    
+    
+    <action
+      attribute="loginForm"
+      input="/Web/Index/index.jsp"
+      name="loginForm"
+      path="/userInfo"
+      scope="request"
+      type="net.tiaozhanbei.action.user.UserInfoAction">
+      <forward name="userInfo" path="/Web/UserInfo/UserInfo.jsp" />
+    </action>
+    <action forward="/Web/Register/RegisterUser.jsp" path="/register" />
+    
+    
+   <action
+      path="/manage/user/noVerifyUserList"
+      type="net.tiaozhanbei.action.user.NoVerifyUserAction"
+      validate="false">
+      <forward name="verifyUserList" path="/Web/Manage/UserManage/noVerifyUser.jsp" />
+    </action>
+    
+    
+    <action
+      attribute="editForm"
+      input="/Web/Manage/UserManage/EditUser.jsp"
+      name="editForm"
+      path="/manage/editOperate"
+      scope="request"
+      type="net.tiaozhanbei.action.manage.user.UserEditAction"
+      validate="false">
+      <forward name="manage" path="/Web/Manage/Manage.jsp" />
+      <forward name="error" path="/Web/errorPage.jsp" />
+    </action>
+    <action
+      input="/Web/Manage/UserManage/noVerifyUser.jsp"
+      path="/manage/user/userverify"
+      type="net.tiaozhanbei.action.manage.user.VerifyAction"
+      validate="false">
+      <forward name="verifyOperate" path="/Web/Manage/UserManage/VerifyUser.jsp" />
+    </action>
+    <action
+      attribute="projectRegForm"
+      input="/Web/Register/AuthorRegister.jsp"
+      name="regAuthorAndProjectForm"
+      path="/authorReg"
+      scope="request"
+      type="net.tiaozhanbei.action.user.AuthorRegAction">
+      <forward
+        name="index"
+        path="/index.do"
+        redirect="true" />
+      <forward name="error" path="/Web/errorPage.jsp" />
+    </action>
+    
+    <action
+      attribute="regForm"
+      input="/Web/Register/CompanyReg.jsp"
+      name="companyForm"
+      path="/companyReg"
+      scope="request"
+      type="net.tiaozhanbei.action.user.CompanyRegAction">
+      <forward name="index" path="/Web/Index/index.jsp" />
+      <forward name="error" path="/Web/errorPage.jsp" />
+    </action>
+    <action
+      attribute="regForm"
+      input="/Web/Register/JudgerReg.jsp"
+      name="juderRegForm"
+      path="/judgerReg"
+      scope="request"
+      type="net.tiaozhanbei.action.user.JudgerRegAction">
+      <forward name="index" path="/Web/Index/index.jsp" />
+      <forward name="error" path="/Web/errorPage.jsp" />
+    </action>
+    <action
+      input="/Web/Manage/UserManage/VerifyUser.jsp"
+      path="/verifyResult"
+      type="net.tiaozhanbei.action.user.VerifyResultAction">
+      <forward name="success" path="/Web/testSuccess.jsp" />
+      <forward name="error" path="/Web/errorPage.jsp" />
+    </action>
+    
+    <action forward="/Web/Manage/Manage.jsp" path="/manage" />
+    <action forward="/Web/Manage/UserManage/PassWordChange.jsp" path="/passWord" />
+    <action
+      attribute="passWordForm"
+      input="/Web/Manage/UserManage/PassWordChange.jsp"
+      name="passWordForm"
+      path="/changePassWord"
+      scope="request"
+      type="net.tiaozhanbei.action.manage.user.PassWordChangeAction" />
+    <action path="/manage/userManage" type="net.tiaozhanbei.action.manage.UserManageAction">
+      <forward name="passwordChange" path="/Web/Manage/UserManage/PassWordChange.jsp" />
+      <forward name="verifyUser" path="/manage/user/noVerifyUserList.do" />
+      <forward name="editUser" path="/Web/Manage/UserManage/EditUser.jsp" />
+      <forward name="regAuthorAndProject" path="/Web/Manage/UserManage/_AuthorRegister.jsp" />
+    </action>
+    <action path="/loginpage" type="net.tiaozhanbei.action.user.LoginpageAction">
+      <forward name="loginpage" path="/Web/Login.jsp" />
+      <forward name="redirect" path="/Web/common/redirect.jsp" />
+    </action>
+    <action forward="/Web/Register/validateimage.jsp" path="/validateimage" />
+    <action
+      attribute="regAuthorAndProjectForm"
+      name="regAuthorAndProjectForm"
+      path="/changeToAuthor"
+      scope="request"
+      type="net.tiaozhanbei.action.manage.user.ChangeToAuthorAction" />
+    
+    
+    
+  </action-mappings>
+
+  <controller />
+</struts-config>
+

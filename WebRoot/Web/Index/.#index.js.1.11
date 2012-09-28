@@ -1,0 +1,93 @@
+$(document).ready(function(){
+ 	
+ 	var path = $("#serverPath").attr("title");
+ 			
+ 	//Load the news
+	$("#newslistcontext").load(path + "/index.do?ajax=news");
+
+	//Load the login
+	$("#loginbox").load(path + "/index.do?ajax=loginbox");
+	$("#votes").load(path + "/index.do?ajax=votes");	
+
+	$("#files").load(path + "/index.do?ajax=files");
+
+	$("#anounce").load(path + "/index.do?ajax=anounce");
+	
+	$("#projectlist .listbody").load(path+"/index.do?ajax=science");
+	
+	$("#projectlist .listtitle div").mouseover(function(){
+		$("projectlist .listtitle div").attr("class","offban");
+		$(this).attr("class","onban");
+		$("#projectlist .listbody div *").hide();
+		$(this.id+" *").show();
+	});
+		
+	pstart();
+	//startclock();
+});
+
+var cu=1,i=1;
+function pstart()
+{
+	for(var j=2;j<5;j++)
+	{
+		$('#indexpic_'+j).hide();
+	}
+	$("#newspic span").eq(3).addClass("current");
+	var Mytime=setTimeout(indexpich,3000);
+}
+function indexpic(id)
+{
+	i=id;
+	clearTimeout(Mytime);
+	$("#newspic span").eq(4-i).addClass("current");
+	$("#newspic span").eq(4-cu).removeClass("current");
+	$('#indexpic_'+cu).hide();
+	$('#indexpic_'+i).fadeIn("slow");
+	cu=i;
+	Mytime=setTimeout(indexpich,3000);
+}
+function indexpich()
+{
+	if(i==4)
+		i=1;
+	else
+		i++;
+	$("#newspic span").eq(4-i).addClass("current");
+	$("#newspic span").eq(4-cu).removeClass("current");
+	$('#indexpic_'+cu).hide();
+	$('#indexpic_'+i).fadeIn("slow");
+	Mytime=setTimeout(indexpich,3000);
+	cu=i;
+}
+
+
+
+
+	var timerID = null;
+	var timerRunning = false;
+		
+	function stopclock (){
+		if(timerRunning)
+			clearTimeout(timerID);
+			timerRunning = false;
+	}
+	function startclock (){
+		stopclock();
+		showtime();
+	}
+	function showtime () {
+		var now = new Date();
+		var hours = now.getHours();
+		var minutes = now.getMinutes();
+		var seconds = now.getSeconds();
+		var timeValue = "";
+			timeValue += ((hours >12) ? hours -12 :hours);
+			timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
+			timeValue += ((seconds < 10) ? ":0" : ":") + seconds;
+			timeValue += ((hours >= 12) ? "PM " : "AM " );
+		$("#clock").html(timeValue);
+		timerID = setTimeout("showtime()",1000);
+		timerRunning = true;
+	}
+	

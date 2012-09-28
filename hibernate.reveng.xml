@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="user" schema="dbo" catalog="WebCup"
+		class="net.tiaozhanbei.model.User">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="news" schema="dbo" catalog="WebCup"
+		class="net.tiaozhanbei.News">
+	</table>
+	<table name="project" schema="dbo" catalog="WebCup"
+		class="net.tiaozhanbei.Project">
+	</table>
+	<table name="project_comment" schema="dbo" catalog="WebCup"
+		class="net.tiaozhanbei.ProjectComment">
+	</table>
+	<table name="visit_history" schema="dbo" catalog="WebCup"
+		class="net.tiaozhanbei.visitHistory">
+	</table>
+	<table name="_user" schema="dbo" catalog="tzcup"
+		class="net.tiaozhanbei.model.User">
+	</table>
+	<table name="filetable" schema="dbo" catalog="tzcup"
+		class="net.tiaozhanbei.model.FileInfo">
+	</table>
+	<table name="letter" schema="dbo" catalog="tzcup"
+		class="net.tiaozhanbei.model.Letter">
+	</table>
+	<table name="news" schema="dbo" catalog="tzcup"
+		class="net.tiaozhanbei.model.News">
+	</table>
+	<table name="project" schema="dbo" catalog="tzcup"
+		class="net.tiaozhanbei.model.Project">
+	</table>
+	<table name="project_score" schema="dbo" catalog="tzcup"
+		class="net.tiaozhanbei.model.ProjectScore">
+	</table>
+	<table name="project_state" schema="dbo" catalog="tzcup"
+		class="net.tiaozhanbei.model.ProjectState">
+	</table>
+	<table name="vote" schema="dbo" catalog="tzcup"
+		class="net.tiaozhanbei.model.Vote">
+	</table>
+	<table name="project_comment" schema="dbo" catalog="tzcup"
+		class="net.tiaozhanbei.model.ProjectComment">
+	</table>
+	<table name="userproject" schema="dbo" catalog="tzcup"
+		class="net.tiaozhanbei.model.UserProjectRelation">
+	</table>
+	<table name="test" schema="dbo" catalog="master"
+		class="test.databasetest.testmodel">
+	</table>
+<table name="testtable" schema="dbo" catalog="master"
+	class="test.databasetest">
+	<primary-key>
+		<generator class="identity"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

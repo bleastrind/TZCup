@@ -1,0 +1,251 @@
+
+
+
+
+body,img,table,form,ul,li,p{
+border:0px;
+margin:0px;
+padding:0px;
+}
+
+body{text-align:center;}
+#container{
+font-size:13px;
+margin-left:auto;
+margin-right:auto;
+text-align:left;
+width:980px;}
+
+
+
+/* Ò³Ê× £¬µ¼º½*/
+#top{
+height:221px;
+width:980px;
+background:url(../images/topa_01.jpg) no-repeat;
+}
+#top ul{margin-left:308px;}
+#top ul li{
+	display:block;
+	float:left;
+	list-style:none;
+	width:133px;
+	text-align:center;
+	font-size:16px;
+	font-family:"Ó×Ô²";
+	font-weight:bold;
+
+}
+#top ul li.index{width:76px;}
+#top ul li a{display:block;width:133px;padding-top:20px;color:#1c448d;text-decoration:none;}
+#top ul li a:hover{background:url(../images/hover_04.jpg) no-repeat top left; color:#f25923;}
+#top ul li.index a{width:76px;}
+#top ul li.index a:hover{background:url(../images/hover_02.jpg) no-repeat top left;}
+	
+/* Ò³Ê×½áÊø */
+
+
+
+/* ÓÒ²àbox */
+#left{
+float:left;
+width:133px;
+background:url(../images/topa_02.jpg) no-repeat;
+height:500px;
+}
+#left ul{
+text-align:right;
+list-style:none;
+margin-right:10px;
+margin-left:10px;
+}
+#left ul li{
+padding-top:1em;
+color:#1c448d;
+font-weight:bold;
+border-bottom:#6881ab 1px dashed;
+}
+#left ul li a{
+color:#0c2f71;
+text-decoration:none;
+font-weight:normal;
+}
+#left ul li a:hover{color:#b0d9ec;}
+
+
+#mid{
+float:left;
+width:550px;
+}
+#right{
+width:260px;
+float:right;
+font-size:13px;
+}
+
+
+#loginbox{
+margin-left:5px;
+margin-right:5px;
+margin-top:10px;
+border-bottom:#1c448d 1px dotted;
+border-top:#1c448d 1px dotted;
+padding-bottom:10px;
+padding-top:10px;
+margin-bottom:20px;
+line-height:2em;
+}
+#formcontent{
+padding-left:10px;
+
+}
+#formcontent table,#searchbox table{
+font-size:13px;
+}
+#formcontent table tr th{color:#1c2b8d;}
+#searchbox .inputtext{
+width:10em;
+}
+#searchbox table tr th{color:white;}
+#formcontent .inputtext{
+width:10em;
+}
+
+
+
+.rightbox{
+width:250px;
+margin-left:6px;
+min-height:150px;
+margin-bottom:10px;
+}
+.rightbox_title{
+height:20px;
+width:240px;
+
+/* background: #5c9ccc url(css/redmond/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50% repeat-x;   */
+
+color:white;
+font-weight:bold;
+padding-top:6px;
+padding-left:15px;
+background-color:#1c448d;
+border-top:#010b19 1px solid;
+}
+.rightbox_body{
+padding-top:10px;
+padding-bottom:10px;
+}
+.rightbox_body ul{margin-left:6px; margin-right:10px; list-style:none;}
+.rightbox_body ul li{color:#121b60;
+border-bottom:#4769a8 1px dashed;
+margin-top:0.7em;
+padding-bottom:0.2em;
+}
+.rightbox_body ul li a{color:#121b60;text-decoration:none;}
+.rightbox_body ul li a:hover{text-decoration:underline; color:#4769a8;}
+/* ÓÒ²àbox½áÊø */
+
+/* ÓÒ²àform */
+
+.rightform table tr th{width:5em;text-align:right;}
+.more{text-align:right;width:100%;margin-top:10px;}
+.more a{color:#4175b4;}
+.more a:hover{color:white;}
+
+
+
+
+
+/* footer */
+#footer{
+clear:both;
+height:100px;
+padding-top:10px;
+font-size:12px;
+background:white;
+text-align:center;
+}
+#footer .links ul li{
+list-style:none;
+display:inline;
+margin-left:10px;
+}
+.links ul li a{color:#121b60;}
+.links ul li a:hover{color:#4175b4;}
+#showlinks{
+padding-top:10px;
+margin-bottom:10px;
+width:auto;
+}
+.links{
+text-align:left;
+line-height:2em;
+}
+.links span{
+float:left;
+color:#666666;
+font-weight:bold;
+margin-left:10px;
+}
+ 
+#about{
+color:#999999;
+text-align:center;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+padding:5px 12px 2px 12px;
+}
+
+
+/* Î»ÖÃµ¼º½
+----------------------------------*/
+#allright{
+float:left;
+}
+#location{
+height:20px;
+width:815px;
+background-color:#6fa7ce;
+margin-top:5px;
+margin-bottom:20px;
+margin-left:10px;
+padding:4px 0px 0px 20px;
+color:#cedcec;
+}
+#location a{color:white;}
+#location a:hover{color:#1a1260;}
+
+
+/* ¸²¸Çjquery-ui
+----------------------------------*/
+/* Ò³Êý
+----------------------------------*/
+.pagelink{
+height:30px;
+padding-top:10px;
+text-align:right;
+font-size:14px;
+}
+.page .first{
+margin-right:10px;
+text-align:center;
+}
+.page a{color:#121b60;text-decoration:none;}
+.page a:hover{text-decoration:underline;color:#6fa7ce;}
+.page .pre{
+	margin-right:10px;
+}
+.page .each{
+	margin-right:10px;
+}
+.page .this{
+	margin-right:10px;
+}
+.page .next{
+	margin-right:10px;
+}
+.page .last{
+	margin-right:10px;
+}

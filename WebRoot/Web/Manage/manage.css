@@ -1,0 +1,89 @@
+/* CSS Document */
+
+/* =====head part====== */
+#managehead{width:980px; height:25px; border-top:#121b60 1px solid; background:#6590c4;
+margin-bottom:30px;
+padding-top:5px;
+}
+#managelogo{float:left; width:auto; color:white; font-weight:bold; font-size:14px;
+margin-left:10px;
+}
+#managenavi{float:right; width:auto; color:white; font-size:12px;
+margin-right:10px;
+}
+
+#manageleft{
+float:left;
+width:200px;
+margin-right:20px;
+}
+#manageright{
+float:right;
+width:755px;
+height:300px;
+border:#6590c4 1px solid;
+margin-bottom:20px;
+}
+
+#managefooter{
+clear:both;
+width:100%;
+border-top:#6590c4 2px solid;
+padding-top:10px;
+padding-bottom:10px;
+text-align:center;
+color:#626262;
+font-size:12px;
+}
+
+/* =========left tree part ======== */
+#controlTree{
+margin:0;
+padding:0;
+width:200px;
+list-style-type:none;
+font-size:14px;
+}
+
+#controlTree a{
+display:block;
+font-weight:bold;
+text-decoration:none;
+height:1.3em;
+}
+#controlTree a:hover{
+border-top:1px solid #1c448d;
+border-bottom:1px solid #d3e5fa;
+background-color:#b0ccec;
+
+}
+#controlTree ul{
+overflow: hidden;
+margin:0;
+padding:0;
+}
+#controlTree li{
+margin:0;
+padding:0;
+list-style-type:none;
+
+}
+#controlTree li a{
+padding:2px 10px 2px 4px;
+border-top:1px solid #d3e5fa;
+border-left:1px solid #d3e5fa;
+border-right:1px solid #1c448d;
+border-bottom:1px solid #1c448d;
+
+}
+#controlTree li.active a,#controlTree li li.active a{
+
+}
+#controlTree li.active li a,#controlTree li li a{
+padding:2px 4px 2px 15px;
+border:none;
+
+}
+#controlTree li.active li a:hover,#controlTree li li a:hover{
+
+}

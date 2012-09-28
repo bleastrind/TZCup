@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/project/addComment.do" location="570,645" dimension="331,104" />
+  <StrutsActivity path="/project/modify.do" location="195,885" dimension="342,104" />
+  <StrutsActivity path="/project.do" location="855,90" dimension="247,104" />
+  <StrutsActivity path="/addfocus.do" location="1170,705" dimension="211,104" />
+  <StrutsActivity path="/manage/projectManage.do" location="105,90" dimension="345,104" />
+  <StrutsActivity path="/regProject.do" location="300,360" dimension="364,104" />
+  <StrutsActivity path="/projects.do" location="1350,105" dimension="253,104" />
+  <StrutsActivity path="/project/vote.do" location="780,780" dimension="256,104" />
+  <StrutsActivity path="/manage/projectInfo.do" location="180,540" dimension="364,104" />
+  <StrutsActivity path="/project/maintenance.do" location="-255,570" dimension="375,104" />
+  <StrutsActivity path="/project/judge.do" location="-585,420" dimension="286,104" />
+  <StrutsActivity path="/deleteComment.do" location="1125,915" dimension="166,104" />
+  <StrutsActivity path="/addmark.do" location="945,915" dimension="166,104" />
+  <StrutsActivity path="/judgeProject.do" location="-555,60" dimension="150,100" />
+  <StrutsActivity path="/project/star.do" location="630,780" dimension="150,100" />
+  <StrutsActivity path="/searchInside.do" location="950,1650" dimension="325,104" />
+  <StrutsActivity path="/Web/Project/project.jsp" location="765,255" dimension="376,331" />
+  <StrutsActivity path="/Web/Project/_normalComments.jsp" location="810,375" dimension="242,53" />
+  <StrutsActivity path="/Web/Project/_professorComments.jsp" location="795,435" dimension="258,53" />
+  <StrutsActivity path="/Web/Project/_interestCompany.jsp" location="810,510" dimension="237,53" />
+  <StrutsActivity path="/Web/Project/_focus.jsp" location="840,315" dimension="170,53" />
+  <StrutsActivity path="/Web/Manage/ProjectManage/mylist.jsp" location="-30,375" dimension="268,106" />
+  <StrutsActivity path="/Web/Manage/UserManage/_regNewProject.jsp" location="315,240" dimension="313,91" />
+  <StrutsActivity path="/Web/Manage/ProjectManage/favorlist.jsp" location="-60,240" dimension="281,106" />
+  <StrutsActivity path="/Web/Projects/__list.jsp" location="1320,480" dimension="166,53" />
+  <StrutsActivity path="/Web/Projects/projects.jsp" location="1290,255" dimension="451,226" />
+  <StrutsActivity path="/Web/Projects/_focus.jsp" location="1530,480" dimension="176,53" />
+  <StrutsActivity path="/Web/testSuccess.jsp" location="840,1155" dimension="155,53" />
+  <StrutsActivity path="/Web/errorPage.jsp" location="750,945" dimension="148,53" />
+  <StrutsActivity path="/Web/Manage/ProjectManage/projectinfo.jsp" location="195,795" dimension="298,53" />
+  <StrutsActivity path="/Web/Manage/ProjectManage/Maintenance.jsp" location="-165,765" dimension="309,53" />
+  <StrutsActivity path="/Web/Project/JudgeProject.jsp" location="-555,210" dimension="209,151" />
+  <StrutsActivity path="/Web/searchInside.jsp" location="1005,1785" dimension="316,166" />
+  <StrutsActivity path="/Web/Projects/__searchInsideList.jsp" location="1035,1860" dimension="242,53" />
+  <StrutsTransition id="/project.do,focus,/Web/Project/_focus.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1102,142" />
+      <AbsolutePoint location="1102,315" />
+      <AbsolutePoint location="993,315" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/projectManage.do,mylist,/Web/Manage/ProjectManage/mylist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="223,194" />
+      <AbsolutePoint location="223,375" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/projectManage.do,regnewproject,/Web/Manage/UserManage/_regNewProject.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="330,194" />
+      <AbsolutePoint location="330,240" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/project/vote.do,ajax,/Web/testSuccess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="916,884" />
+      <AbsolutePoint location="916,1155" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addmark.do,success,/Web/testSuccess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="980,1019" />
+      <AbsolutePoint location="980,1155" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/projectManage.do,favorlist,/Web/Manage/ProjectManage/favorlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="206,194" />
+      <AbsolutePoint location="206,240" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/projectManage.do,modify,/Web/Manage/ProjectManage/modify.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="300,194" />
+      <AbsolutePoint location="300,225" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/projects.do,list,/Web/Projects/__list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1350,165" />
+      <AbsolutePoint location="1235,165" />
+      <AbsolutePoint location="1235,506" />
+      <AbsolutePoint location="1320,506" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/project.do,professor,/Web/Project/_professorComments.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="855,105" />
+      <AbsolutePoint location="855,488" />
+      <AbsolutePoint location="962,488" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/ProjectManage/modify.jsp,null,/project/modify.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="422,346" />
+      <AbsolutePoint location="317,885" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/judgeProject.do,success,/Web/Project/JudgeProject.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-480,160" />
+      <AbsolutePoint location="-480,210" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/projects.do,success,/Web/Projects/projects.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1476,209" />
+      <AbsolutePoint location="1476,255" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/project.do,normal,/Web/Project/_normalComments.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="855,165" />
+      <AbsolutePoint location="855,401" />
+      <AbsolutePoint location="810,401" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/project/maintenance.do,success,/Web/Manage/ProjectManage/Maintenance.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-67,674" />
+      <AbsolutePoint location="-67,765" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchInside.do,searchResult,/Web/searchInside.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1112,1754" />
+      <AbsolutePoint location="1112,1785" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Project/project.jsp,null,/project/addComment.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="886,586" />
+      <AbsolutePoint location="886,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/projects.do,focus,/Web/Projects/_focus.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1603,157" />
+      <AbsolutePoint location="1771,157" />
+      <AbsolutePoint location="1771,506" />
+      <AbsolutePoint location="1706,506" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deleteComment.do,success,/Web/testSuccess.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1208,1019" />
+      <AbsolutePoint location="1208,1181" />
+      <AbsolutePoint location="995,1181" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/project/vote.do,error,/Web/errorPage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="883,884" />
+      <AbsolutePoint location="883,945" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/project.do,success,/Web/Project/project.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="855,194" />
+      <AbsolutePoint location="855,255" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/project.do,interest,/Web/Project/_interestCompany.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="855,142" />
+      <AbsolutePoint location="855,543" />
+      <AbsolutePoint location="810,543" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/projectInfo.do,success,/Web/Manage/ProjectManage/projectinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="362,644" />
+      <AbsolutePoint location="362,795" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/ProjectManage/mylist.jsp,null,/manage/projectInfo.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="195,481" />
+      <AbsolutePoint location="195,540" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Project/project.jsp,null,/deleteComment.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1140,586" />
+      <AbsolutePoint location="1140,915" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Project/project.jsp,null,/addfocus.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="975,586" />
+      <AbsolutePoint location="975,764" />
+      <AbsolutePoint location="1170,764" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/ProjectManage/projectinfo.jsp,null,/project/modify.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="344,848" />
+      <AbsolutePoint location="344,885" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Project/project.jsp,null,/project/vote.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1005,586" />
+      <AbsolutePoint location="1005,780" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Project/project.jsp,null,/project/star.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="945,586" />
+      <AbsolutePoint location="945,764" />
+      <AbsolutePoint location="705,764" />
+      <AbsolutePoint location="705,780" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Project/project.jsp,null,/project/vote.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1035,586" />
+      <AbsolutePoint location="1035,780" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Project/project.jsp,null,/addmark.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1065,586" />
+      <AbsolutePoint location="1065,915" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Project/JudgeProject.jsp,null,/project/judge.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="-450,361" />
+      <AbsolutePoint location="-450,420" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/UserManage/_regNewProject.jsp,null,/regProject.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="471,331" />
+      <AbsolutePoint location="471,360" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/ProjectManage/mylist.jsp,null,/project/maintenance.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="104,481" />
+      <AbsolutePoint location="104,570" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

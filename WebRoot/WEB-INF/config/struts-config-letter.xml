@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+  <form-beans />
+  <global-exceptions />
+  <global-forwards>
+  	<forward name="error" path="/Web/common/404.jsp"></forward>
+  	
+  	
+  </global-forwards>
+
+  <action-mappings >
+    <action path="/manage/sendLetter" type="net.tiaozhanbei.action.manage.letter.SendLetterAction" />
+    <action path="/manage/listLetter" type="net.tiaozhanbei.action.manage.letter.ListLetterAction">
+      <forward name="list" path="/Web/Manage/LetterManage/list.jsp" />
+    </action>
+    <action path="/manage/viewLetter" type="net.tiaozhanbei.action.manage.letter.LetterAction">
+      <forward name="view" path="/Web/Manage/LetterManage/viewLetter.jsp" />
+    </action>
+    <action
+      parameter="letterId"
+      path="/delLetter"
+      type="net.tiaozhanbei.action.manage.letter.DelLetterAction" />
+    <action path="/manage/letterManage" type="net.tiaozhanbei.action.manage.LetterManageAction">
+      <forward name="send" path="/Web/Manage/LetterManage/sendLetter.jsp" />
+      <forward name="listReceive" path="/manage/listLetter.do" />
+      <forward name="listSend" path="/manage/listLetter.do" />
+      <forward name="listNew" path="/manage/listLetter.do" />
+      
+    </action>
+    
+    
+    
+    
+
+    
+    
+     
+    
+  </action-mappings>
+
+	<controller>
+		<set-property property="contentType" value="text/html;charset=GBK" />
+		<set-property property="nocache" value="true" />
+	</controller>
+
+  <!-- Message Resources -->
+	<message-resources parameter="net.tiaozhanbei.util.ApplicationResources" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+	<!--validator-rules.xml 在这个文件中声明了Validator框架的预定义验证 
+<set-property property="pathnames" value="/WEB-INF/config/validator-rules.xml,/WEB-INF/config/validator-user.xml"/>
+--></plug-in>
+
+  
+</struts-config>
+	

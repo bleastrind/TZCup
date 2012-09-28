@@ -1,0 +1,25 @@
+  <ul>
+
+					<li class="index">
+						<a href="<%=path%>/index.do"><bean:message key="index.navigation"></bean:message>
+						</a>
+					</li>
+					<li>
+						<a href="<%=path%>/projects.do"><bean:message
+								key="index.navigation.projects"></bean:message>
+						</a>
+					</li>
+					<li>
+						<a href="<%=path%>/news.do"><bean:message
+								key="index.navigation.news"></bean:message>
+						</a>
+					</li>
+					<li>
+						<a href="#"><bean:message key="index.navigation.introduce"></bean:message>
+						</a>
+					</li>
+					<li>
+						<a href="#"><bean:message key="index.navigation.about"></bean:message>
+						</a>
+					</li>
+				</ul>			

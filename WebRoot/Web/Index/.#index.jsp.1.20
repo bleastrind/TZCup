@@ -1,0 +1,240 @@
+<%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
+<%
+String path = request.getContextPath();
+String current = path+"/Web/Index";
+String common = path+"/Web/common";
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>第十一届挑战杯</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<script src="<%=common %>/js/jquery-1.2.6.js" type="text/javascript"></script>
+	<script src="<%=current %>/index.js" type="text/javascript"></script>
+	<link href="<%=common %>/css/common.css" rel="stylesheet" type="text/css" />
+	<link href="<%=current %>/index.css" rel="stylesheet" type="text/css" />
+
+  </head>
+
+<body>
+<!-- This element is used to help js code to locate the path of the server-->
+<div id="serverPath" style="display: none;" title="<%=path %>">
+</div>
+
+<div id="container">
+
+
+<div id="top">
+<ul>
+
+ <li class="index" ><a href="#"><bean:message key="index.navigation"></bean:message></a></li> 
+ <li><a href="<%=path %>/projects.do"><bean:message key="index.navigation.projects"></bean:message></a></li>
+ <li><a href="<%=path %>/news.do"><bean:message key="index.navigation.news"></bean:message></a></li>
+ <li><a href="#"><bean:message key="index.navigation.introduce"></bean:message></a></li>
+  <li><a href="#"><bean:message key="index.navigation.about"></bean:message></a></li>
+</ul>
+</div>
+<!--=========页首部分结束========-->
+
+<div id="main">
+
+	<div id="left">
+	  <ul>
+	  <li>组织机构</li>
+	  <li><a href="#">组委会名单</a></li>
+	  <li><a href="#">评委名单</a></li>
+	  </ul>
+	  <ul>
+	  <li>大赛赞助</li>
+	  <li><a href="#">组委会名单</a></li>
+	  <li><a href="#">北京航空航天大学</a></li>
+	  </ul>
+	</div>
+	<!-- 最左侧结束 -->
+	
+    <div id="mid">
+	
+	
+	   <div id="news">	   
+	      <div id="newspic"></div>
+		  
+	   </div>
+	   
+	   
+	     <div id="newslist">
+		    <div class="listtitle"><div class="colorban">大赛新闻</div><div class="listmore"><a href="">更多>></a></div></div>
+			<div class="listbody">
+			   <ul id="newslistcontext">
+		    	 <li>Loading...</li>
+		    	 <li>Loading...</li>
+		    	 <li>Loading...</li>
+		    	 <li>Loading...</li>
+		    	 <li>Loading...</li>
+		    	 <li>Loading...</li>
+		    	 <li>Loading...</li>
+		    	 <li>Loading...</li>
+		    	 <li>Loading...</li>
+		    	 <li>Loading...</li>
+		    	 	
+		      </ul>
+			</div>
+		  </div>
+		  
+		  
+		  <div id="projectlist">
+		    <div class="listtitle">
+			     <div class="onban">科技发明类</div> 
+				 <div class="offban">自然科学类</div> 
+				 <div class="offban">社会人文类</div>
+				 <div class="listmore"><a href="<%=path %>/projects.do">更多>></a></div>
+			</div>
+			<div id="projectlistcontext" class="listbody">
+				<h1>Loading..</h1>
+					<ul>
+							<li>
+								<div class="smallshow">
+									<div>
+										<img src="" />
+										<a href="#">projectName</a>
+									</div>
+									<div>
+										projectBrief
+									</div>
+								</div>
+							</li>
+<!--                TO BE Loaded Like: (repeat 4 times)
+							<li>
+								<div class="smallshow">
+									<div>
+										<img src="" />
+										<a href="#">projectName</a>
+									</div>
+									<div>
+										projectBrief
+									</div>
+								</div>
+							</li>
+ -->
+					</ul>	
+						</div>
+		  </div>
+		  
+		  
+		 
+	   
+	</div>
+	<!--=========左侧结束========-->
+	
+
+    <div id="right">
+    
+      <div id="rightpic"> 
+	
+	     <div id="searchbox">
+		    <div class="rightform">
+			<form><table><tr>
+			   <th>站内搜索:</th>
+			   <td><input type="text" name="searchtext" class="inputtext" /></td>
+			   <td><input type="submit" name="searchbutton" value="搜索" class="inputsubmit" /></td>
+			   </tr></table></form>
+			</div>
+		 </div>
+		 
+		 <div id="loginbox">
+		
+		 </div>
+	
+	   <div id="anounce">
+			Loading...
+		 </div>
+		 <div class="rightbox">
+		    <div class="rightbox_title">文件下载</div>
+			<div class="rightbox_body">
+			  <ul id="files">
+			  <li>Loading...</li>
+		    <!--  TO BE Loaded Like:
+		    <li><a href="#">第十一届挑战杯竞赛会徽、VI、吉祥物征集报名表</a></li>
+			<li><a href="#">第十一届挑战杯竞赛主题口号应征报名表</a></li>
+			<li><a href="#">第十一届挑战杯竞赛会歌征集报名表 </a></li>
+			<li><a href="#">暂无</a></li>
+			<li><a href="#">暂无</a></li>
+			-->
+		      </ul>
+			</div>
+			<div class="more"><a href="<%=path %>/file.do">更多>></a></div>
+		 </div>
+		 	 
+		 <div class="rightbox">
+		    <div class="rightbox_title">最新投票</div>
+			<div class="rightbox_body">
+			  <ul id="votes">
+			  <li>Loading..</li>
+			  <!--  TO BE Loaded Like: (repeat 10 times)
+		    	    <h1><a href="#">您觉得本届挑战杯哪方面需要改进？</a></h1>
+		    	    <ul>
+		    	     <input type="radio">1.....</li>
+		    	     </ul>
+					 提交    查看结果
+		    	    </ul>
+		      -->
+		      </ul>
+			</div>
+		 </div>
+		 
+	
+	</div>
+	</div>
+      <!--=========右侧结束========-->
+
+
+
+</div>
+<!--=========主体部分结束========-->
+
+
+
+<div id="footer">
+
+        <div id="showlinks">
+           <div class="links">
+		   <span>友情链接：</span>
+			  <ul>
+		    <li><a href="#">共青团中央</a></li>
+			<li><a href="#">中青网</a></li>
+			<li><a href="#">北京航空航天大学</a></li>
+			<li><a href="#">北航团委</a></li>
+			<li><a href="#">北航新闻网</a></li>
+			<li><a href="#">上海世博会</a></li>
+		      </ul>
+           </div>	
+		   
+		   <div class="links">
+		   <span>组织机构：</span>
+			  <ul>
+		    <li><a href="#">领导小组名单 </a></li>
+			<li><a href="#">委员会名单</a></li>
+		      </ul>
+           </div>
+		   
+		</div>	
+	 
+<div id="about">				
+主办单位：共青团中央 中国科协 教育部 全国学联 北京市政府 <br /> 
+承办单位：北京航空航天大学 
+</div>
+
+ 
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="net.tiaozhanbei.model" schema="dbo">
+  <class catalog="TZCup" lazy="false" name="net.tiaozhanbei.model.Project" schema="dbo" table="project">
+    <id name="Id">
+      <column name="project_id" not-null="false" unique="true"/>
+      <generator class="identity"/>
+    </id>
+    <property generated="never" lazy="false" name="name" not-null="true" type="string">
+      <column length="50" name="project_name" not-null="true"/>
+    </property>
+    <property generated="never" lazy="false" name="type" not-null="true" type="string">
+      <column name="project_type" not-null="true"/>
+    </property>
+    <many-to-one class="net.tiaozhanbei.model.User" column="owner_id" name="owner" not-null="true"/>
+    <property generated="never" lazy="false" name="brief" type="string">
+      <column length="255" name="project_brief"/>
+    </property>
+    <property generated="never" lazy="true" length="8000" name="detal" type="string">
+      <column name="project_detal"/>
+    </property>
+    <property generated="never" lazy="false" name="picPath" type="string">
+      <column length="255" name="project_picpath"/>
+    </property>
+    <one-to-one cascade="all" class="net.tiaozhanbei.model.ProjectState" lazy="proxy" name="state"/>
+    <set catalog="TZCup" inverse="true" lazy="false" name="interestCompany" schema="dbo" sort="unsorted" table="companyproject">
+      <key column="pid" not-null="true"/>
+      <many-to-many class="net.tiaozhanbei.model.User" column="uid" unique="false"/>
+    </set>
+    <property generated="never" lazy="false" name="score"/>
+    <many-to-one class="net.tiaozhanbei.model.FileInfo" column="showFile" lazy="proxy" name="showFile"/>
+  </class>
+</hibernate-mapping>

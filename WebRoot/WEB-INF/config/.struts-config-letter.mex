@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/manage/sendLetter.do" location="60,360" dimension="181,121" />
+  <StrutsActivity path="/manage/listLetter.do" location="255,210" dimension="241,106" />
+  <StrutsActivity path="/manage/viewLetter.do" location="255,570" dimension="181,121" />
+  <StrutsActivity path="/delLetter.do" location="495,570" dimension="181,121" />
+  <StrutsActivity path="/Web/Manage/LetterManage/sendLetter.jsp" location="60,210" dimension="181,106" />
+  <StrutsActivity path="/Web/Manage/LetterManage/viewLetter.jsp" location="240,720" dimension="181,106" />
+  <StrutsActivity path="error;6" location="615,45" dimension="160,72" />
+  <StrutsActivity path="/Web/common/404.jsp" location="615,150" dimension="154,48" />
+  <StrutsActivity path="/Web/Manage/LetterManage/list.jsp" location="390,360" dimension="181,121" />
+  <StrutsActivity path="/manage/letterManage.do" location="135,75" dimension="346,84" />
+  <StrutsTransition id="/manage/listLetter.do,send,/Web/Manage/LetterManage/sendLetters.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="301,323" />
+      <AbsolutePoint location="301,375" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/listLetter.do,list,/Web/Manage/LetterManage/list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="405,316" />
+      <AbsolutePoint location="405,360" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/letterManage.do,listSend,/manage/listLetter.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="308,159" />
+      <AbsolutePoint location="308,210" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/viewLetter.do,view,/Web/Manage/LetterManage/viewLetter.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="345,691" />
+      <AbsolutePoint location="345,720" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/letterManage.do,send,/Web/Manage/LetterManage/sendLetter.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="226,159" />
+      <AbsolutePoint location="226,210" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="error;6,null,/Web/common/404.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="695,117" />
+      <AbsolutePoint location="695,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="manage/letterManage.do,listReceive,/manage/listLetter.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="368,136" />
+      <AbsolutePoint location="368,210" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/LetterManage/sendLetter.jsp,null,/manage/sendLetter.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="150,210" />
+      <AbsolutePoint location="150,481" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/listLetter.do,list,/Web/Manage/LetterManage/listLetter.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="375,323" />
+      <AbsolutePoint location="375,375" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/letterManage.do,listReceive,/manage/listLetter.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="338,159" />
+      <AbsolutePoint location="338,210" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/delLetter.do,del,/ActionResult/letter/del_result.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="585,691" />
+      <AbsolutePoint location="165,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/listLetter.do,receive,/Web/Manage/LetterManage/receiveLetter.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="450,323" />
+      <AbsolutePoint location="450,375" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/sendLetter.do,result,/ActionResult/letter/send_result.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="241,420" />
+      <AbsolutePoint location="600,105" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="manage/letterManage.do,send,/Web/Manage/LetterManage/sendLetter.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="226,136" />
+      <AbsolutePoint location="226,210" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="manage/letterManage.do,listSend,/manage/listLetter.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="338,136" />
+      <AbsolutePoint location="338,210" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/LetterManage/list.jsp,null,/delLetter.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="510,481" />
+      <AbsolutePoint location="510,570" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/LetterManage/sendLetter.jsp,null,/manage/sendLetter.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="120,316" />
+      <AbsolutePoint location="120,360" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/LetterManage/list.jsp,null,/manage/viewLetter.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="421,481" />
+      <AbsolutePoint location="421,570" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/LetterManage/viewLetter.jsp,null,/delLetter.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="421,773" />
+      <AbsolutePoint location="585,773" />
+      <AbsolutePoint location="585,691" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

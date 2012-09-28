@@ -1,0 +1,141 @@
+/* CSS Document */
+
+body,div,p,table{
+margin:0px;
+padding:0px;
+}
+img{
+border:0px;
+} 
+
+body{
+background:url(./images/reg_01.jpg) repeat-x top left;
+font-size:12px;
+text-align:center;
+}
+#container{
+width:785px;
+margin-left:auto;
+margin-right:auto;
+text-align:left;
+}
+
+#top{
+height:187px;
+background:url(./images/reg_04.jpg) no-repeat 0px 40px;
+text-align:right;
+padding:25px 10px 0px 0px;
+}
+
+#top a{
+color:#42478a;
+text-decoration:none;
+}
+#top a:hover{
+color:#FF9933;
+}
+
+
+
+
+#reg{
+margin-left:100px;
+margin-top:-20px;
+width:600px;
+}
+
+#reg form table caption{
+font-size:14px;
+font-weight:bold;
+color:#42478a;
+height:57px;
+background:url(./images/icon_08.jpg) no-repeat top left;
+padding:23px 0px 0px 60px;
+text-align:left;
+}
+
+#reg form table tr{height:40px;text-align:left;}
+  
+#reg form table th{
+width:100px;
+text-align:right;
+color:#666666;
+}
+
+#reg form table td{width:300px;}
+#reg form table td.box{padding-left:15px;width:200px;}
+
+
+#reg form table td input{
+width:160px;
+height:1em;
+}
+
+#reg form table td span.tip,.tipContact{
+text-align:left;
+color:#666666;
+}
+
+#reg form table td span.warn{
+color:#FF9933;
+background:url(./images/error.png) no-repeat 0 0;
+padding-left:18px;
+padding-top:3px;
+height:15px;
+}
+
+#reg form table td span.correct{
+color:#339933;
+background:url(./images/accept.png) no-repeat 0 0;
+padding-left:18px;
+padding-top:3px;
+height:15px;
+}
+
+td.select{
+text-align:left;
+line-height:2em;
+vertical-align:top;
+} 
+th.select{
+vertical-align:top;
+padding-top:5px;
+}
+#reg form table input.category{
+height:1em;
+width:20px;
+}
+#reg form table input.sex{
+height:1em;
+width:20px;
+}
+#reg form table input.type{
+height:1em;
+width:20px;
+}
+
+
+#regbutton{
+height:25px;
+text-align:center;
+padding-top:40px;
+}
+.button{
+background:url(./images/button_13.jpg) repeat-x 0 0;
+border:1px solid #252855;
+width:70px;
+color:#FFFFFF;
+height:25px;
+font-weight:bold;
+text-align:center;
+}
+
+.button_mouseover{
+background:url(./images/button_16.jpg) repeat-x 0 0;
+border:1px solid #898546;
+width:70px;
+color:#FFFFFF;
+height:25px;
+font-weight:bold;
+text-align:center;
+}

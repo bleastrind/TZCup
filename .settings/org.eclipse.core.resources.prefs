@@ -1,0 +1,14 @@
+#Sun Mar 29 17:20:02 CST 2009
+=\=\=\=\=\=\=
+<<<<<<<=org.eclipse.core.resources.prefs
+>>>>>>>=1.4
+eclipse.preferences.version=1
+encoding//WebRoot/ActionResult/file/file_download.jsp=GBK
+encoding//WebRoot/Web/Index/index.jsp=GBK
+encoding//WebRoot/Web/Project/project.jsp=GBK
+encoding//WebRoot/Web/Register/AuthorRegister.jsp=GBK
+encoding//WebRoot/Web/Register/RegisterUser.jsp=GBK
+encoding//WebRoot/Web/Register/_AuthorRegister.jsp=GBK
+encoding//WebRoot/Web/Register/_RegisterUser.jsp=GBK
+encoding//src/net/tiaozhanbei/service/impl=UTF-8
+encoding//src/net/tiaozhanbei/service/impl/FileInfoServiceImpl.java=UTF-8

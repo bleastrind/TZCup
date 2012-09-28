@@ -1,0 +1,120 @@
+
+#mid{
+padding-left:20px;
+}
+
+
+/* 项目介绍-左*/
+#left_info{}
+#infoauthor{
+width:400px;
+float:left;
+}
+#infoauthor {
+line-height:2em;
+}
+#infoauthor strong{color:#19537e;}
+.projecttitle{font-size:20px; height:30px; font-weight:bold;color:#666666;}
+
+#starvote{
+height:20px;
+}
+
+#starvote span {
+height:20px;
+margin-left:10px;
+padding-bottom:5px;
+color:#19537e;
+}
+
+
+/* 项目介绍-右*/
+#infobanplace{
+float:right;
+}
+.infoban{
+float:right;
+height:16px;
+font-size:12px;
+padding-left:7px;
+padding-right:7px;
+padding-top:5px;
+background-color:#ecf2f6;
+border:#b7d4e9 solid 1px;
+}
+.infoban a{color:#19537e;text-decoration:none;}
+.infoban a:hover{text-decoration:underline;}
+
+/* 图片视频*/
+#picvideo{
+clear:both;
+width:550px;
+}
+
+
+/* 项目介绍*/
+.left_intro{
+line-height:1.5em;
+margin-top:20px;
+}
+.introtitle{
+background:url(./images/icon1.gif) no-repeat 0px 5px;
+width:auto;
+border-bottom:1px solid #2b51ac;
+color:#2b51ac;
+font-size:14px;
+font-weight:bold;
+padding-left:15px;
+}
+ #intro{width:300px;float:left;}
+ #file{width:230px;float:left;margin-left:20px;}
+ #professor{width:550px;}
+.professorname{color:#2b51ac;margin-top:10px;}
+.professorcontent{margin-left:30px;margin-right:30px;}
+
+
+
+/* 评论相关*/
+#addcommentform{
+width:550px;
+margin-top:30px;
+}
+.addcomment{margin-top:10px;margin-bottom:10px;}
+.addcomment table th{font-weight:normal;color:#121b60;vertical-align:top;width:80px;}
+.addcomment form table .inputtext{width:450px;}
+
+
+#normalComment table{
+border:1px solid #909090;
+width:550px;
+height:auto;
+margin-top:10px;
+}
+#normalComment table tr th{
+width:400px;
+font-weight:normal;
+padding-top:5px;
+padding-bottom:5px;
+padding-left:5px;
+}
+#normalComment table tr th span{color:#121b60;}
+#normalComment table tr td{
+text-align:right;
+padding-right:5px;
+}
+#normalComment table a{color:#2b51ac;text-decoration:none;}
+#normalComment table a:hover{color:#2b51ac;text-decoration:underline;}
+
+
+
+
+.left_comment h3{color:#5c8743; font-weight:normal; padding-top:10px;}
+textarea.comment{width:98%;font-size:12px;}
+input.addcomment{float:right; margin-top:10px; margin-right:5px;background-color:#b7d4e9;border:#19537e solid 1px; 
+padding-top:3px;
+color:#19537e;
+font-size:12px;
+margin-bottom:10px;
+}
+
+

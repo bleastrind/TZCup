@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+
+
+<link href="manageright.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="rightmain">
+
+<!-- 每个div(class:managebox)是一个模块，里面的boxtitle，boxbody通用，boxbody内的div目前分为class input 和class list -->
+
+<div class="managebox">
+  <div class="boxtitle">修改密码</div>
+  <div class="boxbody">
+  <div class="input">
+    <form>
+    <table>
+	  <tr><th>当前密码:</th><td><input type="password"  name="" class="inputtext"/></td></tr>
+	  <tr><th>新密码:</th><td><input type="password"  name="" class="inputtext"/></td></tr>
+	  <tr><th>新密码确认:</th><td><input type="password"  name="" class="inputtext"/></td></tr>
+	  <tr><th></th><td><input type="submit" value="提交" class="submitbutton"/></td></tr>
+	</table>
+	</form>
+	</div>
+  </div>
+</div>
+
+
+
+<div class="managebox">
+  <div class="boxtitle">文件列表</div>
+  <div class="boxbody">
+   <div class="list">
+   
+    <table>
+	  <tr class="listtitle"><td>文件名</td><td>权限设置</td><td>下载</td><td>删除</td></tr>
+	  <tr><th>第十一届挑战杯项目报名表</th><td>注册用户</td><td><a href="#">下载</a></td><td><a href="#">删除</a></td></tr>
+	  <tr><th>文件名</th><td>注册用户</td><td><a href="#">下载</a></td><td><a href="#">删除</a></td></tr>
+	</table>
+	</div>
+	
+  </div>
+</div>
+
+
+
+<div class="managebox">
+  <div class="boxtitle">文件上传</div>
+  <div class="boxbody">
+  <div class="input">
+    <form action="/manage/uploadfile.do" method="post">
+    <table>
+	  <tr><th>选择文件:</th><td><input type="file" id="file"/>
+
+	  </td></tr>
+	  <tr><th>权限设置:</th><td>
+	  
+	  
+	             <table>
+                <tr>
+                    <td> <%=fileinfo.getName()%> </td>
+                </tr>
+                <tr>
+                    <th>新闻编审</th>
+                    <td><input id="ac2" type="checkbox" value="1" /></td>
+                </tr>
+                <tr>
+                    <th>普通用户</th>
+                    <td><input id="ac5" type="checkbox" value="1" /></td>
+                </tr>
+                <tr>
+                    <th>大赛评委</th>
+                    <td><input id="ac3" type="checkbox" value="1" /></td>
+                </tr>
+                <tr>
+                    <th>企业用户</th>
+                    <td><input id="ac4" type="checkbox" value="1" /></td>
+                </tr>
+            </table>
+			
+			
+	  </td></tr>
+	  <tr><th></th><td><input type="submit" value="提交" class="submitbutton"/></td></tr>
+	</table>
+	</form>
+	</div>
+  </div>
+</div>
+
+
+
+
+<div class="managebox">
+  <div class="boxtitle">用户个人信息修改</div>
+  <div class="boxbody">
+    <form action="">
+		<table>		
+			<tr> <td>用户名：</td> </tr>
+			<tr><td>用户类型：</td>
+
+			<td>参赛作者</td>
+			
+
+			<td>普通用户</td>
+			
+	
+			<td>企业用户</td>
+			
+
+			<td>评委用户</td>			
+</tr>			
+			<tr> <td>注册时间：</td><td><%=time%></td></tr>
+			<tr> <td>email:</td><td><input type="text" value=""/></td> </tr>
+			<tr><td> 企业名称/学校 ：</td><td><input type="text" value=""/></td> </tr>
+			<tr> <td>联系方式：</td><td><input type="text" value="" name="phone" /> </td>  </tr>
+			<tr> <td>真实姓名:</td><td> <input  type="text" value=""/> </td>  </tr>
+			<tr> <td>性别：</td><td></td></tr>
+
+			   <tr><td><input type="submit" value="提交修改"/> </td><td><a href="index.do"></a></td> </tr>
+			   	
+		</table>		
+	</form>
+  </div>
+</div>
+
+
+
+<div class="managebox">
+  <div class="boxtitle">我收藏的项目</div>
+  <div class="boxbody">
+   <div class="list">
+   
+    <table>
+	  <tr class="listtitle"><td>项目名称</td><td>项目作者</td><td>查看</td><td>移除</td></tr>
+	  <tr><th>第十一届挑战杯项目报名表</th><td>XXX</td><td><a href="#">查看</a></td><td><a href="#">移除</a></td></tr>
+	  <tr><th>第十一届挑战杯项目报名表</th><td>XXX</td><td><a href="#">查看</a></td><td><a href="#">移除</a></td></tr>
+	</table>
+	</div>	
+  </div>
+  
+    <div class="boxtitle">我参与的项目</div>
+  <div class="boxbody">
+   <div class="list">
+   
+    <table>
+	  <tr class="listtitle"><td>项目名称</td><td>项目作者</td><td>查看</td><td>修改</td></tr>
+	  <tr><th>第十一届挑战杯项目报名表</th><td>XXX</td><td><a href="#">查看</a></td><td><a href="#">修改</a></td></tr>
+	  <tr><th>第十一届挑战杯项目报名表</th><td>XXX</td><td><a href="#">查看</a></td><td><a href="#">修改</a></td></tr>
+	</table>
+	</div>	
+  </div>
+</div>
+
+
+
+</div>
+</body>
+</html>

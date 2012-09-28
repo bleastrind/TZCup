@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+  <form-beans >
+    <form-bean name="newVoteForm" type="net.tiaozhanbei.form.NewVoteForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards/>
+
+
+  <action-mappings >
+    <action
+      parameter="action"
+      path="/manage/voteManage"
+      type="net.tiaozhanbei.action.manage.VoteManageAction">
+      <forward name="list" path="/Web/Manage/VoteManage/list.jsp" />
+      <forward name="add" path="/Web/Manage/VoteManage/addvote.jsp" />
+    </action>
+    <action
+      attribute="newVoteForm"
+      name="newVoteForm"
+      path="/manage/addvote"
+      scope="request"
+      type="net.tiaozhanbei.action.manage.vote.AddvoteAction"
+      validate="false" />
+    <action
+      parameter="action"
+      path="/manage/votemodify"
+      scope="request"
+      type="net.tiaozhanbei.action.manage.vote.ModifyAction"
+      validate="false" />
+    <action
+      parameter="action"
+      path="/vote"
+      scope="request"
+      type="net.tiaozhanbei.action.VoteAction"
+      validate="false">
+      <forward name="vote" path="/Web/Index/vote.jsp" />
+    </action>
+    
+ 
+
+     
+   </action-mappings>
+
+  
+</struts-config>
+	

@@ -1,0 +1,22 @@
+#
+#Fri Mar 06 13:25:58 CST 2009
+genBasicCompId=false
+sessionFactoryName=
+profile=
+daoSFId=mySessionFactory
+version=3.2
+jndiPath=
+detectM2M=false
+reStrategyClass=
+springDaoFile=WebRoot/WEB-INF/config/applicationContext.xml
+useJavaTypes=false
+keyGenerator=identity
+libInstallFolder=WebRoot/WEB-INF/lib
+addLibs2Project=false
+genVersionTag=false
+sessionFactoryId=mySessionFactory
+basePersistenceClass=
+reSettingsFile=/TZCup/hibernate.reveng.xml
+configFile=/TZCup/WebRoot/WEB-INF/config/hibernate.cfg.xml
+createConfigFile=false
+addLibs2Classpath=false

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/manage/voteManage.do" location="30,195" dimension="332,104" />
+  <StrutsActivity path="/manage/addvote.do" location="405,450" dimension="334,104" />
+  <StrutsActivity path="/manage/votemodify.do" location="945,90" dimension="326,104" />
+  <StrutsActivity path="/vote.do" location="345,30" dimension="234,104" />
+  <StrutsActivity path="/Web/Manage/VoteManage/list.jsp" location="950,250" dimension="238,53" />
+  <StrutsActivity path="/Web/Manage/VoteManage/addvote.jsp" location="50,450" dimension="270,53" />
+  <StrutsActivity path="/Web/Index/vote.jsp" location="690,75" dimension="150,100" />
+  <StrutsTransition id="/manage/voteManage.do,list,/Web/Manage/VoteManage/list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="362,265" />
+      <AbsolutePoint location="950,265" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/voteManage.do,add,/Web/Manage/VoteManage/addvote.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="196,299" />
+      <AbsolutePoint location="196,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/vote.do,vote,/Web/Index/vote.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="579,90" />
+      <AbsolutePoint location="690,90" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/VoteManage/list.jsp,null,/manage/votemodify.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1069,250" />
+      <AbsolutePoint location="1069,194" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/Web/Manage/VoteManage/addvote.jsp,null,/manage/addvote.do,0" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="320,476" />
+      <AbsolutePoint location="405,476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

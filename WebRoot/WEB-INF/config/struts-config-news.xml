@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans >
+    <form-bean name="newAddForm" type="net.tiaozhanbei.struts.form.NewAddForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      path="/news"
+      type="net.tiaozhanbei.action.NewsAction"
+      validate="false">
+      
+      <forward name="listNews" path="/Web/News/NewsIndex.jsp" />
+      <forward name="error" path="/Web/errorPage.jsp" />
+    </action>
+    
+    <action
+      path="/manage/newsManage"
+      type="net.tiaozhanbei.action.manage.NewsManageAction"
+      validate="false">
+      <forward name="listAnnonce" path="/Web/Manage/NewsManage/AnnonceList.jsp" />
+      <forward name="listNews" path="/Web/Manage/NewsManage/NewsList.jsp" />
+      <forward name="addAnnonce" path="/Web/Manage/NewsManage/AnnonceAddBox.jsp" />
+      <forward name="addNews" path="/Web/Manage/NewsManage/NewsAddBox.jsp" />
+      <forward name="error" path="/Web/errorPage.jsp" />
+    </action>
+ <action
+      input="/Web/Manage/NewsManage/NewsList.jsp"
+      path="/manage/delNews"
+      type="net.tiaozhanbei.action.manage.news.DelNewsAction"
+      validate="false">
+      
+    </action>
+    <action
+      input="/Web/Manage/NewsManage/NewsAddBox.jsp"
+      path="/manage/addNews"
+      type="net.tiaozhanbei.action.manage.news.AddNewsAction"
+      validate="false">
+      
+      
+    </action>
+    
+    
+    <action
+      input="/Web/Manage/NewsManage/NewsList.jsp"
+      path="/manage/setHeadNews"
+      type="net.tiaozhanbei.action.manage.news.SetHeadNewsAction" />
+    
+    <action
+      input="/Web/Manage/NewsManage/AnnonceList.jsp"
+      path="/manage/delAnnonce"
+      type="net.tiaozhanbei.action.manage.news.SetHeadNewsAction" />
+    <action
+      input="/Web/Manage/NewsManage/AnnonceAddBox.jsp"
+      path="/manage/addAnnonce"
+      type="net.tiaozhanbei.action.manage.news.AddAnnonceAction" />
+    
+    
+    
+  </action-mappings>
+
+  <controller />
+</struts-config>
+

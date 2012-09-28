@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="net.tiaozhanbei.model">
+ <class catalog="TZCup" name="ProjectState" schema="dbo" table="project_state">
+  <id name="Id" type="integer">
+   <column name="state_id"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="process"/>
+  <property column="votes" generated="never" lazy="false" name="votes" type="integer"/>
+  <property generated="never" lazy="false" name="rank"/>
+  <set lazy="true" name="scores" sort="unsorted">
+   <key/>
+   <one-to-many class="net.tiaozhanbei.model.ProjectScore"/>
+  </set>
+  <property column="avgStars" generated="never" lazy="false"
+   name="totalStars" type="integer"/>
+  <one-to-one class="net.tiaozhanbei.model.Project" name="project"/>
+  <property name="visit" type="integer"/>
+  <property name="starnum" type="integer"/>
+ </class>
+</hibernate-mapping>

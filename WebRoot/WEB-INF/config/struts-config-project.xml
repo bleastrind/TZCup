@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+    <form-beans>
+        <form-bean name="projectForm" type="net.tiaozhanbei.form.ProjectForm" />
+        <form-bean name="projectCommentForm" type="net.tiaozhanbei.form.ProjectCommentForm" />
+    </form-beans>
+    <global-exceptions />
+    <global-forwards />
+    <action-mappings>
+        <action attribute="projectCommentForm" input="/Web/Project/project.jsp" name="projectCommentForm" path="/project/addComment" scope="request"
+        type="net.tiaozhanbei.action.project.AddCommentAction" />
+        <action
+      attribute="projectForm"
+      name="projectForm"
+      parameter="action"
+      path="/project/modify"
+      scope="request"
+      type="net.tiaozhanbei.action.manage.project.ModifyAction" />
+        <action parameter="ajax" path="/project" scope="request" type="net.tiaozhanbei.action.ProjectAction" validate="false">
+            <forward name="normal" path="/Web/Project/_normalComments.jsp" />
+            <forward name="professor" path="/Web/Project/_professorComments.jsp" />
+            <forward name="focus" path="/Web/Project/_focus.jsp" />
+            <forward name="interest" path="/Web/Project/_interestCompany.jsp" />
+            <forward name="success" path="/Web/Project/project.jsp" />
+        </action>
+        <action path="/addfocus" scope="request" type="net.tiaozhanbei.action.project.AddFocusAction" validate="false" />
+        <action parameter="action" path="/manage/projectManage" scope="request" type="net.tiaozhanbei.action.manage.ProjectManageAction" validate="false">
+            
+            <forward name="mylist" path="/Web/Manage/ProjectManage/mylist.jsp" />
+            <forward name="regnewproject" path="/Web/Manage/UserManage/_regNewProject.jsp" />
+            <forward name="favorlist" path="/Web/Manage/ProjectManage/favorlist.jsp" />
+        </action>
+        <action attribute="projectRegForm" name="projectRegForm" path="/regProject" scope="request" type="net.tiaozhanbei.action.manage.project.RegProjectAction" />
+        <action parameter="ajax" path="/projects" type="net.tiaozhanbei.action.ProjectsAction" validate="false">
+            <forward name="list" path="/Web/Projects/__list.jsp" />
+            <forward name="focus" path="/Web/Projects/_focus.jsp" />
+            <forward name="success" path="/Web/Projects/projects.jsp" />
+        </action>
+        <action path="/project/vote" type="net.tiaozhanbei.action.project.VoteAction">
+            <forward name="ajax" path="/Web/testSuccess.jsp" />
+            <forward name="error" path="/Web/errorPage.jsp" />
+        </action>
+        <action path="/manage/projectInfo" type="net.tiaozhanbei.action.manage.project.ProjectInfoAction" validate="false">
+            <forward name="success" path="/Web/Manage/ProjectManage/projectinfo.jsp" />
+        </action>
+        <action path="/project/maintenance" scope="request" type="net.tiaozhanbei.action.manage.project.MaintenanceAction" validate="false">
+            <forward name="success" path="/Web/Manage/ProjectManage/Maintenance.jsp" />
+        </action>
+        <action attribute="projectCommentForm" name="projectCommentForm" path="/project/judge" scope="request" type="net.tiaozhanbei.action.project.JudgeAction"
+        validate="false" />
+        <action path="/deleteComment" type="net.tiaozhanbei.action.project.DeleteCommentAction">
+            <forward name="success" path="/Web/testSuccess.jsp" />
+        </action>
+        <action path="/addmark" type="net.tiaozhanbei.action.project.AddmarkAction">
+            <forward name="success" path="/Web/testSuccess.jsp" />
+        </action>
+        <action path="/judgeProject" type="net.tiaozhanbei.action.project.JudgeProjectAction">
+            <forward name="success" path="/Web/Project/JudgeProject.jsp" />
+        </action>
+        <action path="/project/star" type="net.tiaozhanbei.action.project.StarAction" validate="false" />
+        <action path="/searchInside" type="net.tiaozhanbei.action.SearchInsideAction">
+            <forward name="searchResult" path="/Web/searchInside.jsp" />
+        </action>
+    </action-mappings>
+    <controller />
+</struts-config>

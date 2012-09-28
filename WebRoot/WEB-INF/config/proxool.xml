@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="gb2312"?>
+<something-else-entirely>
+	<proxool>
+		<alias>db</alias>
+		<driver-url>jdbc:jtds:sqlserver://202.112.129.175:1433</driver-url>
+		<driver-class>net.sourceforge.jtds.jdbc.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="webcup" />
+			<property name="password" value="webcup2009" />
+			<property name="autoReconnect" value="true" />
+		</driver-properties>
+		<!-- proxool自动侦察各个连接状态的时间间隔(毫秒),   
+			侦察到空闲的连接就马上回收,超时的销毁-->
+		<house-keeping-sleep-time>90000</house-keeping-sleep-time>
+		<!-- 指因未有空闲连接可以分配而在队列中等候的最大请求数,超过这个请求数的   
+			用户连接就不会被接受(正式库10，测试库1)-->
+		<proxool.simultaneous-build-throttle>10</proxool.simultaneous-build-throttle>
+		<!-- 最少保持的空闲连接数(正式库10，测试库1)-->
+		<prototype-count>10</prototype-count>
+		<!-- 连接池允许的最大连接数(正式库700，测试库10)-->
+		<maximum-connection-count>700</maximum-connection-count>
+		<!-- 连接池开启的最小连接数(正式库350，测试库5)-->
+		<minimum-connection-count>350</minimum-connection-count>
+		<!-- 一个活动连接的最长时间15分钟，单位毫秒 -->
+		<maximum-active-time>900000</maximum-active-time>
+		<!-- 一个连接的最长活动时间4小时，单位毫秒 -->
+		<maximum-connection-lifetime>
+			14400000
+		</maximum-connection-lifetime>
+		<!-- 自动检查连接是否断掉开关 -->
+		<test-before-use>true</test-before-use>
+		<!-- 自动检查连接是否断的测试sql语句,For SQLServer -->
+		<house-keeping-test-sql>
+			select getdate()
+		</house-keeping-test-sql>
+	</proxool>
+</something-else-entirely>

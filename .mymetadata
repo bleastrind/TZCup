@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="TZCup"
+  id="myeclipse.1235205033498"
+  context-root="/TZCup"
+  j2ee-spec="5.0"
+  archive="TZCup.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

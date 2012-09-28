@@ -1,0 +1,48 @@
+/* CSS Document */
+
+#tags > ul >li > a{
+font-size: 2em;
+}
+#location{
+height:20px;
+width:815px;
+background-color:#6fa7ce;
+margin-top:5px;
+margin-bottom:20px;
+margin-left:10px;
+padding:4px 0px 0px 20px;
+color:#cedcec;
+}
+#location a{color:white;}
+#location a:hover{color:#1a1260;}
+
+
+#tags{
+font-size:13px
+}
+#mid{
+padding-left:10px;
+}
+
+.projectshow{
+width:550px;
+height:103px;
+list-style:none;
+border-bottom:#4769a8 1px dashed;
+margin-top:5px;
+}
+
+.projectshowpic{width:130px;height:95px;float:left;}
+.projectshowinfo{
+padding-top:12px;
+height:95px;
+float:left;
+margin-left:5px;
+}
+.projectshowinfo table tr th{font-weight:normal;width:260px;vertical-align:bottom;}
+.projectshowinfo table tr td{width:140px;text-align:right;}
+.projectshowinfo table tr th span{color:#212b79;}
+span.title a{font-size:14px;color:#1c2b8d;font-weight:bold;text-decoration:none;}
+span.title a:hover{color:#6590c4;text-decoration:underline;}
+
+#projectslist ul li{list-style:none;}

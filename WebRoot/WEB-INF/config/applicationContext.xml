@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+						http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+						http://www.springframework.org/schema/tx 
+						http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+						http://www.springframework.org/schema/context 
+ 						http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+
+	<!-- 配置数据源 -->
+   <bean id="dataSource"
+    class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName">
+    <value>org.logicalcobwebs.proxool.ProxoolDriver</value>
+    </property>
+    <property name="url">
+    <value>proxool.db</value>
+    </property>
+    </bean>
+	<!-- Session -->
+	<bean id="mySessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="current_session_context_class">thread</prop>
+				<prop key="hibernate.cache.provider_class">
+					org.hibernate.cache.EhCacheProvider
+				</prop>
+				<prop key="connection.pool_size">500</prop>
+			 <prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>net/tiaozhanbei/model/User.hbm.xml</value>
+				<value>net/tiaozhanbei/model/Project.hbm.xml</value>
+				<value>
+					net/tiaozhanbei/model/ProjectComment.hbm.xml
+				</value>
+				<value>net/tiaozhanbei/model/News.hbm.xml</value>
+				<value>
+					net/tiaozhanbei/model/visitHistory.hbm.xml
+				</value>
+				<value>net/tiaozhanbei/model/FileInfo.hbm.xml</value>
+				<value>
+					net/tiaozhanbei/model/ProjectState.hbm.xml
+				</value>
+				<value>net/tiaozhanbei/model/Letter.hbm.xml</value>
+				<value>
+					net/tiaozhanbei/model/ProjectScore.hbm.xml
+				</value>
+				<value>net/tiaozhanbei/model/Vote.hbm.xml</value>
+				<value>net/tiaozhanbei/model/VoteItem.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<!-- HibernateTemplate -->
+	<bean id="hibernateTemplate"
+		class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+
+	<!--配置事务-->
+	<bean id="myTxManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="myTxManager"/> 
+	
+
+	<!-- Ioc注解支持 -->
+	<context:annotation-config />
+	
+	<context:component-scan base-package="net.tiaozhanbei">
+	<!--	<context:include-filter type="aspectj"
+			expression="net.tiaozhanbei.service..*" />
+		<context:include-filter type="regex"
+			expression="net\.tiaozhanbei\.dao\..*" />
+		<context:exclude-filter type="regex"
+			expression="net\.tiaozhanbei\.util\..*" />
+	--></context:component-scan>
+	
+	<!-- 配置持久化操作层 -->
+	<bean id="ProjectStateDAO"
+		class="net.tiaozhanbei.dao.impl.ProjectStateDAO">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+	<bean id="FileInfoDAO"
+		class="net.tiaozhanbei.dao.impl.FileInfoDAO">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+	<bean id="LetterDAO" class="net.tiaozhanbei.dao.impl.LetterDAO">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProjectScoreDAO"
+		class="net.tiaozhanbei.dao.impl.ProjectScoreDAO">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+	<bean id="VoteDAO" class="net.tiaozhanbei.dao.impl.VoteDAO">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+	<bean id="VoteItemDAO" class="net.tiaozhanbei.dao.impl.VoteItemDAO">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+	<bean id="UserDAO" class="net.tiaozhanbei.dao.impl.UserDAO">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="visitHistoryDAO"
+		class="net.tiaozhanbei.dao.impl.visitHistoryDAO">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProjectCommentDAO"
+		class="net.tiaozhanbei.dao.impl.ProjectCommentDAO">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProjectDAO" class="net.tiaozhanbei.dao.impl.ProjectDAO">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="NewsDAO" class="net.tiaozhanbei.dao.impl.NewsDAO">
+		<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+
+    <bean id="testDAO" class="test.databasetest.testDAO">
+    	<property name="sessionFactory">
+			<ref bean="mySessionFactory" />
+		</property>
+	</bean>
+	<!-- 配置业务逻辑层 -->
+	<bean id="userService"
+		class="net.tiaozhanbei.service.impl.UserServiceImpl">
+		<property name="userDAO">
+			<ref local="UserDAO" />
+		</property>
+		<property name="projectDAO">
+			<ref local="ProjectDAO" />
+		</property>
+
+	</bean>
+	<bean id="projectService"
+		class="net.tiaozhanbei.service.impl.ProjectServiceImpl">
+		<property name="projectDAO">
+			<ref local="ProjectDAO" />
+		</property>
+		<property name="projectCommentDAO">
+			<ref local="ProjectCommentDAO" />
+		</property>
+	</bean>
+
+	<bean id="newsService"
+		class="net.tiaozhanbei.service.impl.NewsServiceImpl">
+		<property name="newsDAO">
+			<ref local="NewsDAO" />
+		</property>
+
+	</bean>
+
+	<bean id="fileinfoService"
+		class="net.tiaozhanbei.service.impl.FileInfoServiceImpl">
+		<property name="projectDAO">
+			<ref local="ProjectDAO" />
+		</property>
+		<property name="fileInfoDAO">
+			<ref local="FileInfoDAO" />
+		</property>
+
+	</bean>
+
+		<bean id="verifyFilter"
+		class="net.tiaozhanbei.filter.VerifyFilter">
+
+		<property name="userService">
+			<ref local="userService" />
+		</property>
+
+	</bean>
+<!-- 时间任务触发器 -->
+<bean id="ProjectScoreAllocTask" class="net.tiaozhanbei.schedule.ResetProjectAllocableScoreTask">
+</bean>
+
+<bean id="scheduleTask" class="org.springframework.scheduling.timer.ScheduledTimerTask">
+        <property name="delay">
+            <value>10</value>
+        </property>
+        <property name="period">
+            <value>86400000</value>
+        </property>
+        <property name="timerTask">
+            <ref local="ProjectScoreAllocTask"/>
+        </property>
+</bean>
+
+<bean class="org.springframework.scheduling.timer.TimerFactoryBean">
+
+    <property name="scheduledTimerTasks">
+      <list>
+        <ref bean="scheduleTask"/>
+      </list>
+    </property>
+  </bean>
+
+
+
+
+
+
+	<import resource="classpath:net/tiaozhanbei/util/Consts.xml" />
+ 	<import resource="classpath:net/tiaozhanbei/aspects/aspects.xml" />
+ <!--  <import resource="classpath:net/tiaozhanbei/aspects/security/applicationContext-security.xml" />
+ -->
+</beans>

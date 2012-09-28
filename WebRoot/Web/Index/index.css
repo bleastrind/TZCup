@@ -1,0 +1,168 @@
+/* CSS Document */
+
+
+#top{
+height:306px;
+width:980px;
+background:url(./images/top_01.jpg) no-repeat;
+}
+
+#topcontent{
+float:right;
+margin-top:170px;
+margin-right:10px;
+color:white;
+line-height:2em;
+text-align:right;
+}
+#right{
+background:url(./images/top_04.jpg) no-repeat;
+}
+#left{
+background:url(./images/top_02.jpg) no-repeat;
+}
+
+/* ”“≤‡Ω· ¯ Document */
+
+
+#news{width:560px;}
+#newspic{
+width:560px;
+height:300px;
+margin-left:13px;
+margin-top:10px;
+padding-top:5px;
+background:#e7edf8;
+}
+.bigpic{
+width:400px;
+height:290px;
+margin-left:10px;
+background:#aaaaaa;
+float:left;
+}
+.otherpic{
+width:130px;
+height:300px;
+float:left;
+margin-left:10px;
+display:inline;s
+}
+.big{width:400px;
+height:290px;}
+.otherpic img{width:130px;height:95px;margin-bottom:2px;display:block;}
+.otherpic img.current{border:2px solid #ff713d;}
+
+
+
+#newslist{
+width:550px;
+clear:both;
+margin-left:10px;
+
+}
+.listtitle{
+height:27px;
+padding-top:15px;
+width:100%;
+border-bottom:#1c5e8d 1px solid;
+}
+.colorban{
+float:left;
+width:6em;
+text-align:center;
+font-weight:bold;
+color:white;
+height:1.4em;
+padding-top:0.4em;
+margin-left:10px;
+background-color:#1c5e8d;
+}
+.listmore{
+float:right;
+padding-top:10px;
+}
+.listmore a{color:#6590c4;}
+.listmore a:hover{color:#1c448d;}
+
+.listbody ul{margin-top:10px; margin-left:20px; margin-bottom:10px;list-style:circle;}
+.listbody ul li{
+border-bottom:#a0b1c4 1px dashed;
+margin-top:0.7em;
+padding-bottom:0.2em;
+}
+.listbody ul li a{color:black;text-decoration:none;}
+.listbody ul li a:hover{color:#6590c4;}
+
+
+
+
+
+#projectlist{width:550px;
+clear:both;
+margin-left:10px;
+margin-right:10px;
+margin-top:30px;
+}
+#projectlist .listbody{
+border-bottom:#1c5e8d 1px solid;
+}
+.onban{
+float:left;
+width:7em;
+text-align:center;
+font-weight:bold;
+color:white;
+height:1.4em;
+padding-top:0.4em;
+margin-left:10px;
+background-color:#4665ab;
+}
+.offban{
+float:left;
+width:7em;
+text-align:center;
+font-weight:bold;
+color:#4665ab;
+height:1.4em;
+padding-top:0.4em;
+margin-left:10px;
+}
+
+.projectshow{
+width:220px;
+height:110px;
+margin-right:10px;
+margin-top:10px;
+}
+.showpic{
+float:left;
+margin-top:5px;
+margin-left:5px;
+margin-right:10px;
+width:120px; height:100px; 
+background-color:#0000FF;
+}
+.showinfo{
+padding-top:10px;
+line-height:2em;
+font-weight:bold;
+color:#4665ab;
+}
+.showinfo a{color:#4665ab; font-size:15px;}
+.showinfo a:hover{color:#b0ccec; font-size:15px;}
+
+
+/* Õ∂∆± */
+.vote{
+}
+.vote h5{color:#121b60;font-size:14px;margin-top:10px;margin-bottom:10px;}
+input.buttonsubmit{
+	width:3em;
+height:22px;
+text-align:center;
+padding-top:2px;
+background-color:#1c448d;
+color:white;
+border:1px solid #121b60;
+}

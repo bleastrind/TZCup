@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+  <form-beans />
+  <global-exceptions />
+  <global-forwards>
+  
+  	<forward name="ajaxSuccessOrFailure" path="/ActionResult/ajaxSuccessOrFailureBox.jsp"/>
+  	
+  </global-forwards>
+
+  <action-mappings >
+    <action
+      parameter="ajax"
+      path="/index"
+      type="net.tiaozhanbei.action.IndexAction"
+      validate="false">
+      <forward name="science" path="/Web/Index/_science.jsp" />
+      <forward name="files" path="/Web/Index/__FileBox.jsp" />
+      
+      <forward name="login" path="/Web/Index/_LoginBox.jsp" />
+      <forward name="anounce" path="/Web/Index/_annonceList.jsp" />
+      <forward name="news" path="/Web/Index/__NewsBox.jsp" />
+      <forward name="votes" path="/Web/Index/_votes.jsp" />
+      
+      <forward name="success" path="/Web/Index/index.jsp" />
+    </action>
+    
+    
+    <action
+      input="/Web/Index/index.jsp"
+      path="/login"
+      type="net.tiaozhanbei.action.user.LoginAction"
+      validate="false" />
+
+    <action
+      path="/manage"
+      type="net.tiaozhanbei.action.manage.ManageAction"
+      validate="false">
+      <forward name="success" path="/Web/Manage/Manage.jsp" />
+    </action>
+    <action path="/logoff" type="net.tiaozhanbei.action.user.LogoffAction">
+      <forward
+        name="index"
+        path="/index.do"
+        redirect="true" />
+    </action>
+     
+    
+  </action-mappings>
+
+	<controller>
+		<set-property property="contentType" value="text/html;charset=GBK" />
+		<set-property property="nocache" value="true" />
+	</controller>
+
+  <!-- Message Resources -->
+	<message-resources parameter="net.tiaozhanbei.util.ApplicationResources" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+	<!--validator-rules.xml 在这个文件中声明了Validator框架的预定义验证 
+<set-property property="pathnames" value="/WEB-INF/config/validator-rules.xml,/WEB-INF/config/validator-user.xml"/>
+--></plug-in>
+
+  
+</struts-config>
+	
